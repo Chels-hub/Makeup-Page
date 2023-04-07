@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap"
+      rel="stylesheet"
+    />
+    <title>Makeup</title>
+    <style>
+      body {
+        background: linear-gradient(
+          179.4deg,
+          rgb(253, 240, 233) 2.2%,
+          rgb(255, 194, 203) 96.2%
+        );
+      }
+      h1 {
+        text-align: center;
+        font-family: "Alkatra", cursive;
+        font-size: 80px;
+        margin: 0;
+      }
+      h2 {
+        text-align: center;
+        font-family: "Alkatra", cursive;
+        margin: 0;
+      }
+      p {
+        font-family: "Alkatra", cursive;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 5px;
+        transition: all 150ms ease-in-out;
+      }
+      button {
+        display: block;
+        border-radius: 10px;
+        margin: 0 auto;
+        border: 5px solid black;
+        background: black;
+        color: white;
+        font-size: 20px;
+        border: 5px;
+        padding: 10px 15px;
+        transform-origin: all 100ms ease-in-out;
+      }
+      img:hover {
+        filter: contrast(70%);
+        transform: scale(1.2);
+      }
+      button:hover {
+        background: grey;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+      }
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        margin: 10px auto;
+        border-radius: 7px;
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+      }
+      .dark {
+        background: black;
+        color: white;
+      }
+      .dark .container {
+        background-color: #393e46;
+      }
+      .dark .a {
+        color: plum;
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <button class="dark-button">Change Theme</button>
+    <div class="container">
+      <h1>Makeup</h1>
+      <h2>Enhance your inner beauty</h2>
+      <div class="grid">
+        <img
+          src="https://www.fabmood.com/inspiration/wp-content/uploads/2021/08/cool-makeup-look-25.jpg"
+          alt="makeup"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1596205521983-9c372fb3d4f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
+          alt="face"
+        />
+        <img
+          src="https://images.pexels.com/photos/3681538/pexels-photo-3681538.png?cs=srgb&dl=pexels-domineves-anthony-3681538.jpg&fm=jpg"
+          alt="brushes"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1630084775816-7abb7383ded5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          alt="face"
+        />
+      </div>
+      <p>
+        Cosmetics designed to enhance or alter one's appearance (makeup) can be
+        used to conceal blemishes, enhance one's natural features (such as the
+        eyebrows and eyelashes), add color to a person's face, or change the
+        appearance of the face entirely to resemble a different person, creature
+        or object.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Cosmetics">Read more online</a>
+    </div>
+    <footer>Coded by <a>Chelsea Dela Cruz</a></footer>
+  </body>
+  <script>
+    function changeTheme() {
+      let body = document.querySelector("body");
+      body.classList.toggle("dark");
+    }
+    let themeButton = document.querySelector(".dark-button");
+    themeButton.addEventListener("click", changeTheme);
+  </script>
+</html>
